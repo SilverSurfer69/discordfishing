@@ -49,18 +49,18 @@ def test_shop_and_inventory():
     assert player.money == 85
     assert player.inventory.get("beer") == 1
 
-    # Cannot afford something too expensive (e.g. golden rod upgrade)
-    # basic to fiberglass is 100 coins
+    # Cannot afford something too expensive (e.g. bamboo_rod upgrade)
+    # basic to bamboo is 500 coins, player has 85
     success, msg = engine.upgrade_rod()
     assert success is False
     assert player.rod == "basic_rod"
 
     # Add more money and upgrade rod
-    player.add_money(20) # Total 105
+    player.add_money(415) # Total 500
     success, msg = engine.upgrade_rod()
     assert success is True
-    assert player.rod == "fiberglass_rod"
-    assert player.money == 5
+    assert player.rod == "bamboo_rod"
+    assert player.money == 0
 
 def test_buffs_and_usage():
     player = Player("Buffer")
@@ -83,11 +83,11 @@ def test_buffs_and_usage():
 
     # Add a rod that also gives luck to see them multiply/stack correctly
     player.add_money(500)
-    engine.upgrade_rod() # 100 coins, fiberglass
+    engine.upgrade_rod() # 500 coins, bamboo
 
     effects = engine._get_active_effects()
-    # Fiberglass gives 1.2 luck, cigarettes 1.5
-    assert effects["luck"] == 1.5 * 1.2
+    # Bamboo gives 1.1 luck, cigarettes 1.5
+    assert effects["luck"] == 1.5 * 1.1
 
 def test_fishing_mechanics():
     player = Player("Fisher")

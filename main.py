@@ -1,9 +1,13 @@
+import os
 import sys
 import time
 from typing import Optional
 from fishing_game.models import Player
 from fishing_game.engine import GameEngine
 from fishing_game.data import FISH_DB, ITEMS_DB, RODS_DB, RARITIES
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def print_separator():
     print("-" * 50)
@@ -30,6 +34,7 @@ def main():
     while True:
         print_menu()
         choice = input("Enter your choice (1-6): ")
+        clear_screen()
 
         if choice == '1':
             print("Casting line...")

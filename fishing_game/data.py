@@ -63,27 +63,62 @@ RODS_DB = {
         "price": 0, # Starting item
         "luck_mult": 1.0,
         "catch_rate_mult": 1.0,
+        "next_upgrade": "bamboo_rod"
+    },
+    "bamboo_rod": {
+        "name": "Bamboo Rod",
+        "price": 500,
+        "luck_mult": 1.1,
+        "catch_rate_mult": 1.05,
         "next_upgrade": "fiberglass_rod"
     },
     "fiberglass_rod": {
         "name": "Fiberglass Rod",
-        "price": 100,
-        "luck_mult": 1.2,
-        "catch_rate_mult": 1.1,
+        "price": 2500,
+        "luck_mult": 1.25,
+        "catch_rate_mult": 1.15,
+        "next_upgrade": "graphite_rod"
+    },
+    "graphite_rod": {
+        "name": "Graphite Rod",
+        "price": 10000,
+        "luck_mult": 1.5,
+        "catch_rate_mult": 1.3,
         "next_upgrade": "carbon_fiber_rod"
     },
     "carbon_fiber_rod": {
         "name": "Carbon Fiber Rod",
-        "price": 500,
-        "luck_mult": 1.5,
-        "catch_rate_mult": 1.5,
+        "price": 50000,
+        "luck_mult": 1.8,
+        "catch_rate_mult": 1.6,
+        "next_upgrade": "titanium_rod"
+    },
+    "titanium_rod": {
+        "name": "Titanium Rod",
+        "price": 250000,
+        "luck_mult": 2.2,
+        "catch_rate_mult": 2.0,
+        "next_upgrade": "diamond_rod"
+    },
+    "diamond_rod": {
+        "name": "Diamond Rod",
+        "price": 1000000,
+        "luck_mult": 3.0,
+        "catch_rate_mult": 2.5,
         "next_upgrade": "golden_rod"
     },
     "golden_rod": {
         "name": "Golden Rod",
-        "price": 2500,
-        "luck_mult": 3.0,
-        "catch_rate_mult": 2.0,
+        "price": 5000000,
+        "luck_mult": 5.0,
+        "catch_rate_mult": 3.5,
+        "next_upgrade": "mythic_rod"
+    },
+    "mythic_rod": {
+        "name": "Mythic Rod",
+        "price": 25000000,
+        "luck_mult": 10.0,
+        "catch_rate_mult": 5.0,
         "next_upgrade": None
     }
 }
